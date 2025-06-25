@@ -1,7 +1,7 @@
 import React from 'react';
 import { PhotoProvider, PhotoView } from 'react-photo-view';
 import 'react-photo-view/dist/react-photo-view.css';
-import './PhotoGallery.css'; // Your custom styling
+import './PhotoGallery.css'; 
 
 const images = [
   '/assets/img1.jpeg',
@@ -11,7 +11,7 @@ const images = [
   '/assets/img5.jpeg',
   '/assets/img6.jpeg',
   '/assets/img7.jpeg',
-  // Add more image paths
+  
 ];
 
 const PhotoGallery = () => {
