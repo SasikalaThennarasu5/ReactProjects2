@@ -1,0 +1,21 @@
+/* styles/custom.css */
+
+body {
+  background: linear-gradient(120deg, #f5f7fa, #c3cfe2);
+  color: #333;
+}
+
+h2 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 5px;
+  margin-bottom: 20px;
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}

@@ -1,0 +1,33 @@
+.countdown-container {
+  text-align: center;
+  font-family: sans-serif;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.time-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.time-grid div {
+  background: #f2f2f2;
+  padding: 15px;
+  border-radius: 10px;
+  min-width: 80px;
+}
+
+.time-grid span {
+  display: block;
+  font-size: 32px;
+  color: #007bff;
+}
+
+.event-started {
+  color: green;
+  margin-top: 30px;
+}

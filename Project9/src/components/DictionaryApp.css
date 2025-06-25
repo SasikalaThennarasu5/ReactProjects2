@@ -1,0 +1,65 @@
+.dictionary-app {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.dictionary-form {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.dictionary-form input {
+  padding: 10px;
+  width: 60%;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.dictionary-form button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+.definition-card {
+  background: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.definition-card h3 {
+  text-transform: capitalize;
+  color: #333;
+}
+
+.meaning h4 {
+  margin-top: 15px;
+  color: #555;
+}
+
+.meaning ul {
+  list-style: disc;
+  margin-left: 20px;
+}
+
+.example {
+  font-style: italic;
+  color: #555;
+  margin-top: 5px;
+}
