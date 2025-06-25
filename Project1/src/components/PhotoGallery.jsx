@@ -1,55 +1,34 @@
-import React, { useState } from 'react';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
-import './PhotoGallery.css';
+import React from 'react';
+import { PhotoProvider, PhotoView } from 'react-photo-view';
+import 'react-photo-view/dist/react-photo-view.css';
+import './PhotoGallery.css'; // Your custom styling
 
-import img1 from '../assets/img1.jpeg';
-import img2 from '../assets/img2.jpeg';
-import img3 from '../assets/img3.jpeg';
-import img4 from '../assets/img4.jpeg';
-import img5 from '../assets/img5.jpeg';
-import img6 from '../assets/img6.jpeg';
-import img7 from '../assets/img7.jpeg';
+const images = [
+  '/assets/img1.jpeg',
+  '/assets/img2.jpeg',
+  '/assets/img3.jpeg',
+  '/assets/img4.jpeg',
+  '/assets/img5.jpeg',
+  '/assets/img6.jpeg',
+  '/assets/img7.jpeg',
+  // Add more image paths
+];
 
-const images = [img1, img2, img3, img4, img5, img6, img7];
-
-const Project1 = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
-
+const PhotoGallery = () => {
   return (
     <div className="gallery-container">
-      <h2>Photo Gallery</h2>
-      <div className="gallery-grid">
-        {images.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`Gallery ${index}`}
-            onClick={() => {
-              setPhotoIndex(index);
-              setIsOpen(true);
-            }}
-          />
-        ))}
-      </div>
-
-      {isOpen && (
-        <Lightbox
-          mainSrc={images[photoIndex]}
-          nextSrc={images[(photoIndex + 1) % images.length]}
-          prevSrc={images[(photoIndex + images.length - 1) % images.length]}
-          onCloseRequest={() => setIsOpen(false)}
-          onMovePrevRequest={() =>
-            setPhotoIndex((photoIndex + images.length - 1) % images.length)
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % images.length)
-          }
-        />
-      )}
+      <h2>📷 Photo Gallery</h2>
+      <PhotoProvider>
+        <div className="gallery-grid">
+          {images.map((src, i) => (
+            <PhotoView key={i} src={src}>
+              <img src={src} alt={`img-${i}`} className="gallery-thumb" />
+            </PhotoView>
+          ))}
+        </div>
+      </PhotoProvider>
     </div>
   );
 };
 
-export default Project1;
+export default PhotoGallery;
